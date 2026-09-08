@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pawanputra Ambulance & Mortuary Freezer Services | Indore</title>
+
+    <meta name="description"
+        content="24x7 Ambulance, Mortuary Freezer Box, Nursing and Home Healthcare Services in Indore. Call Pawanputra for immediate assistance.">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            background: #ffffff;
+        }
+
+        /* TOP BAR */
+
+        .top-bar {
+            background: #111;
+            color: white;
+            padding: 12px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            min-height: 85px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 7%;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .logo img {
+            width: 180px;
+            max-height: 65px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #222;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e31e24;
+        }
+
+        .call-btn {
+            background: #e31e24;
+            color: white;
+            padding: 13px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 600px;
+            background:
+                linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 80px 10%;
+        }
+
+        .hero-content {
+            max-width: 750px;
+            color: white;
+        }
+
+        .emergency-tag {
+            background: #e31e24;
+            padding: 10px 18px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .primary-btn {
+            background: #e31e24;
+            color: white;
+            padding: 16px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .secondary-btn {
+            border: 2px solid white;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* SECTION TITLE */
+
+        .section-title {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            padding: 80px 20px 40px;
+        }
+
+        .section-title span {
+            color: #e31e24;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin: 15px 0;
+        }
+
+        .section-title p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* SERVICES */
+
+        .services {
+            background: #f7f7f7;
+            padding-bottom: 80px;
+        }
+
+        .service-container {
+            width: 86%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .service-card a {
+            color: #e31e24;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .emergency-card {
+            background: #e31e24;
+            color: white;
+        }
+
+        .emergency-card p,
+        .emergency-card a {
+            color: white;
+        }
+
+        /* ABOUT */
+
+        .about {
+            padding: 90px 10%;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-left span {
+            color: #e31e24;
+            font-weight: bold;
+        }
+
+        .about-left h2 {
+            font-size: 40px;
+            margin: 20px 0;
+        }
+
+        .about-left p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .features {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            font-weight: bold;
+        }
+
+        .emergency-box {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 60px 30px;
+            border-radius: 10px;
+        }
+
+        .emergency-box i {
+            font-size: 60px;
+            color: #e31e24;
+            margin-bottom: 20px;
+        }
+
+        .emergency-box h3 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .emergency-box a {
+            display: block;
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* WHY US */
+
+        .why-us {
+            background: #f7f7f7;
+            padding-bottom: 80px;
+        }
+
+        .why-container {
+            width: 86%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .why-card {
+            background: white;
+            padding: 35px 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .why-card i {
+            font-size: 40px;
+            color: #e31e24;
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #e31e24;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .contact h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .contact-call {
+            background: white;
+            color: #e31e24;
+            padding: 18px 35px;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        .footer-logo img {
+            width: 160px;
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            margin: 8px;
+        }
+
+        /* FLOATING BUTTONS */
+
+        .floating-call {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 60px;
+            height: 60px;
+            background: #e31e24;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            z-index: 999;
+        }
+
+        /* MOBILE */
+
+        @media(max-width: 768px) {
+
+            .top-bar {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 550px;
+                padding: 50px 7%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-left h2 {
+                font-size: 32px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .contact h2 {
+                font-size: 30px;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+        <p>🚨 24×7 Emergency Services Available in Indore</p>
+
+        <a href="tel:7898585434">
+            <i class="fa-solid fa-phone"></i>
+            Call Now: 7898585434
+        </a>
+    </div>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="logo.png" alt="Pawanputra">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="tel:7898585434" class="call-btn">
+            <i class="fa-solid fa-phone"></i>
+            CALL NOW
+        </a>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="emergency-tag">
+                🚨 24×7 EMERGENCY SERVICE
+            </span>
+
+            <h1>
+                Ambulance & Mortuary Freezer Services in Indore
+            </h1>
+
+            <p>
+                Fast, Reliable and Professional Emergency Services
+                Available 24 Hours a Day.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="tel:7898585434" class="primary-btn">
+                    <i class="fa-solid fa-phone"></i>
+                    Call Ambulance
+                </a>
+
+                <a href="#services" class="secondary-btn">
+                    Our Services
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="services" id="services">
+
+        <div class="section-title">
+
+            <span>OUR SERVICES</span>
+
+            <h2>Professional Healthcare & Emergency Services</h2>
+
+            <p>
+                We provide reliable and fast services across Indore.
+            </p>
+
+        </div>
+
+
+        <div class="service-container">
+
+            <div class="service-card">
+                <div class="service-icon">🚑</div>
+                <h3>Ambulance Service</h3>
+                <p>24×7 ambulance services for emergency and patient transportation.</p>
+                <a href="tel:7898585434">Call Now →</a>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">❄️</div>
+                <h3>Mortuary Freezer</h3>
+                <p>Dead Body Freezer Box and Mortuary Freezer services available 24×7.</p>
+                <a href="tel:7898585434">Call Now →</a>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">🏥</div>
+                <h3>Home Healthcare</h3>
+                <p>Professional healthcare support and patient care services at home.</p>
+                <a href="tel:7898585434">Call Now →</a>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">👩‍⚕️</div>
+                <h3>Nursing Staff</h3>
+                <p>Experienced nursing staff available for home healthcare support.</p>
+                <a href="tel:7898585434">Call Now →</a>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon">❤️</div>
+                <h3>Patient Caretaker</h3>
+                <p>Dedicated caretakers for elderly and patient care at home.</p>
+                <a href="tel:7898585434">Call Now →</a>
+            </div>
+
+
+            <div class="service-card emergency-card">
+                <div class="service-icon">🚨</div>
+                <h3>Emergency Support</h3>
+                <p>तत्काल सहायता के लिए हमें अभी कॉल करें।</p>
+                <a href="tel:7898585434">Emergency Call →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <div class="about-content">
+
+            <div class="about-left">
+
+                <span>ABOUT PAWANPUTRA</span>
+
+                <h2>
+                    Your Trusted Emergency Service Partner in Indore
+                </h2>
+
+                <p>
+                    Pawanputra Ambulance & Mortuary Freezer Services provides
+                    reliable emergency transportation and healthcare support services.
+                </p>
+
+                <p>
+                    Our priority is fast response, professional service
+                    and complete support during emergencies.
+                </p>
+
+                <div class="features">
+                    <div>✅ 24×7 Service Available</div>
+                    <div>✅ Fast Response</div>
+                    <div>✅ Professional Team</div>
+                    <div>✅ Service Across Indore</div>
+                </div>
+
+            </div>
+
+
+            <div class="about-right">
+
+                <div class="emergency-box">
+
+                    <i class="fa-solid fa-phone-volume"></i>
+
+                    <h3>Need Emergency Help?</h3>
+
+                    <p>Call us immediately</p>
+
+                    <a href="tel:7898585434">
+                        7898585434
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+
+    <section class="why-us">
+
+        <div class="section-title">
+
+            <span>WHY CHOOSE US</span>
+
+            <h2>
+                We Are Available When You Need Us
+            </h2>
+
+        </div>
+
+
+        <div class="why-container">
+
+            <div class="why-card">
+                <i class="fa-solid fa-clock"></i>
+                <h3>24×7 Available</h3>
+                <p>Emergency support anytime.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>Quick Response</h3>
+                <p>Fast assistance when required.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-user-doctor"></i>
+                <h3>Professional Service</h3>
+                <p>Experienced and supportive team.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Indore Coverage</h3>
+                <p>Services available across Indore.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <h2>Need Immediate Assistance?</h2>
+
+        <p>
+            Call Pawanputra Ambulance & Mortuary Freezer Services Now.
+        </p>
+
+        <a href="tel:7898585434" class="contact-call">
+
+            <i class="fa-solid fa-phone"></i>
+
+            7898585434
+
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            <img src="logo.png" alt="Pawanputra">
+        </div>
+
+        <p>
+            © 2026 Pawanputra Ambulance & Mortuary Freezer Services
+        </p>
+
+        <p>
+            📍 Indore, Madhya Pradesh
+        </p>
+
+    </footer>
+
+
+    <!-- FLOATING CALL BUTTON -->
+
+    <a href="tel:7898585434" class="floating-call">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        console.log("Pawanputra Website Loaded Successfully! 🚑");
+
+        const cards = document.querySelectorAll(".service-card");
+
+        cards.forEach((card) => {
+
+            card.addEventListener("mouseenter", () => {
+                card.style.cursor = "pointer";
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
