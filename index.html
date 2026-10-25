@@ -1,801 +1,844 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Pawanputra Ambulance & Mortuary Freezer Services | Indore</title>
-
-    <meta name="description"
-        content="24x7 Ambulance, Mortuary Freezer Box, Nursing and Home Healthcare Services in Indore. Call Pawanputra for immediate assistance.">
-      <link rel="icon" href="/favicon.png.png">
-
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"WebSite",
- "name":"Pawanputra Ambulance & Mortuary Freezer Services",
- "alternateName":"Pawanputra Ambulance Indore",
- "url":"https://pawanputraambulance.github.io/"
-}
-</script>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <title>Pawanputra Ambulance & Healthcare Services | Indore, Bhopal, Jabalpur</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: '#DC2626',
+                        brandRedHover: '#B91C1C',
+                        brandNavy: '#0F172A',
+                        brandBlue: '#1D4ED8',
+                        brandGreen: '#16A34A',
+                        brandYellow: '#F59E0B',
+                        brandTeal: '#0D9488',
+                        brandTealHover: '#0F766E'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .pulse-call {
+            animation: pulse-red 1.8s infinite;
         }
-
-        html {
-            scroll-behavior: smooth;
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+            70% { box-shadow: 0 0 0 14px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
         }
-
-        body {
-            font-family: Arial, sans-serif;
-            color: #222;
-            background: #ffffff;
+        .pulse-wa {
+            animation: pulse-green 1.8s infinite;
         }
-
-        /* TOP BAR */
-
-        .top-bar {
-            background: #111;
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
+            70% { box-shadow: 0 0 0 14px rgba(22, 163, 74, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+        }
+        .city-tab.active {
+            background-color: #DC2626;
             color: white;
-            padding: 12px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            border-color: #DC2626;
         }
-
-        .top-bar a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* NAVBAR */
-
-        .navbar {
-            min-height: 85px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 7%;
-            background: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-
-        .logo img {
-            width: 180px;
-            max-height: 65px;
-            object-fit: contain;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #222;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #e31e24;
-        }
-
-        .call-btn {
-            background: #e31e24;
-            color: white;
-            padding: 13px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 600px;
-            background:
-                linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-                url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80");
-
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            padding: 80px 10%;
-        }
-
-        .hero-content {
-            max-width: 750px;
-            color: white;
-        }
-
-        .emergency-tag {
-            background: #e31e24;
-            padding: 10px 18px;
-            display: inline-block;
-            font-weight: bold;
-            margin-bottom: 25px;
-            border-radius: 4px;
-        }
-
-        .hero h1 {
-            font-size: 55px;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .primary-btn {
-            background: #e31e24;
-            color: white;
-            padding: 16px 25px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-
-        .secondary-btn {
-            border: 2px solid white;
-            color: white;
-            padding: 15px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        /* SECTION TITLE */
-
-        .section-title {
-            text-align: center;
-            max-width: 800px;
-            margin: auto;
-            padding: 80px 20px 40px;
-        }
-
-        .section-title span {
-            color: #e31e24;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .section-title h2 {
-            font-size: 38px;
-            margin: 15px 0;
-        }
-
-        .section-title p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* SERVICES */
-
-        .services {
-            background: #f7f7f7;
-            padding-bottom: 80px;
-        }
-
-        .service-container {
-            width: 86%;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 35px 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .service-icon {
-            font-size: 45px;
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            font-size: 23px;
-            margin-bottom: 15px;
-        }
-
-        .service-card p {
-            line-height: 1.6;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .service-card a {
-            color: #e31e24;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .emergency-card {
-            background: #e31e24;
-            color: white;
-        }
-
-        .emergency-card p,
-        .emergency-card a {
-            color: white;
-        }
-
-        /* ABOUT */
-
-        .about {
-            padding: 90px 10%;
-            background: white;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-left span {
-            color: #e31e24;
-            font-weight: bold;
-        }
-
-        .about-left h2 {
-            font-size: 40px;
-            margin: 20px 0;
-        }
-
-        .about-left p {
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .features {
-            margin-top: 25px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            font-weight: bold;
-        }
-
-        .emergency-box {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 60px 30px;
-            border-radius: 10px;
-        }
-
-        .emergency-box i {
-            font-size: 60px;
-            color: #e31e24;
-            margin-bottom: 20px;
-        }
-
-        .emergency-box h3 {
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
-
-        .emergency-box a {
-            display: block;
-            font-size: 30px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        /* WHY US */
-
-        .why-us {
-            background: #f7f7f7;
-            padding-bottom: 80px;
-        }
-
-        .why-container {
-            width: 86%;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-        }
-
-        .why-card {
-            background: white;
-            padding: 35px 20px;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-
-        .why-card i {
-            font-size: 40px;
-            color: #e31e24;
-            margin-bottom: 20px;
-        }
-
-        .why-card h3 {
-            margin-bottom: 10px;
-        }
-
-        /* CONTACT */
-
-        .contact {
-            background: #e31e24;
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-        }
-
-        .contact h2 {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-
-        .contact p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .contact-call {
-            background: white;
-            color: #e31e24;
-            padding: 18px 35px;
-            text-decoration: none;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        /* FOOTER */
-
-        footer {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
-        }
-
-        .footer-logo img {
-            width: 160px;
-            margin-bottom: 20px;
-        }
-
-        footer p {
-            margin: 8px;
-        }
-
-        /* FLOATING BUTTONS */
-
-        .floating-call {
-            position: fixed;
-            right: 25px;
-            bottom: 25px;
-            width: 60px;
-            height: 60px;
-            background: #e31e24;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 25px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-            z-index: 999;
-        }
-
-        /* MOBILE */
-
-        @media(max-width: 768px) {
-
-            .top-bar {
-                flex-direction: column;
-                gap: 8px;
-                text-align: center;
-            }
-
-            .navbar {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .nav-links {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero {
-                min-height: 550px;
-                padding: 50px 7%;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .about-left h2 {
-                font-size: 32px;
-            }
-
-            .features {
-                grid-template-columns: 1fr;
-            }
-
-            .contact h2 {
-                font-size: 30px;
-            }
-
-            .section-title h2 {
-                font-size: 30px;
-            }
-        }
-
     </style>
-
 </head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-brandRed selection:text-white">
 
-<body>
-
-    <!-- TOP BAR -->
-
-    <div class="top-bar">
-        <p>🚨 24×7 Emergency Services Available in Indore</p>
-
-        <a href="tel:7898585434">
-            <i class="fa-solid fa-phone"></i>
-            Call Now: 7898585434
-        </a>
+    <!-- 24/7 Top Emergency Bar -->
+    <div class="bg-brandRed text-white py-2.5 px-4 text-xs md:text-sm font-bold sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2.5 h-2.5 rounded-full bg-yellow-300 animate-ping"></span>
+                <span class="tracking-wide">24/7 Emergency Ambulance, Mortuary & Home Caretaker Services</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:+917898585434" class="hover:underline flex items-center gap-1.5 text-yellow-300">
+                    <i class="fa-solid fa-phone-volume"></i> +91 78985 85434
+                </a>
+                <span class="hidden sm:inline text-slate-300">|</span>
+                <a href="https://wa.me/917898585434?text=Hello%20Pradumbh%20Kourav%20Ji,%20I%20need%20urgent%20assistance." target="_blank" class="hover:underline flex items-center gap-1.5 text-emerald-300 font-bold">
+                    <i class="fa-brands fa-whatsapp"></i> Chat with Pradumbh Kourav
+                </a>
+            </div>
+        </div>
     </div>
 
+    <!-- Main Navigation Bar -->
+    <nav class="bg-white border-b border-slate-200 sticky top-[40px] z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                
+                <!-- Logo & Brand Header -->
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brandRed via-red-600 to-brandTeal flex items-center justify-center text-white text-2xl font-black shadow-lg">
+                        <i class="fa-solid fa-truck-medical"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl md:text-2xl font-black text-brandNavy leading-none block">
+                            PAWANPUTRA
+                        </span>
+                        <span class="text-xs font-bold text-brandRed tracking-widest block uppercase">
+                            Ambulance & Healthcare Services
+                        </span>
+                    </div>
+                </a>
 
-    <!-- NAVBAR -->
+                <!-- Desktop Nav Links -->
+                <div class="hidden lg:flex items-center gap-6 font-semibold text-sm text-slate-700">
+                    <a href="#services" class="hover:text-brandRed transition">Our Services</a>
+                    <a href="#city-areas" class="hover:text-brandRed transition">Service Areas</a>
+                    <a href="#equipment" class="hover:text-brandRed transition">Equipment Rent/Sale</a>
+                    <a href="#healthcare" class="hover:text-brandRed transition">Nursing & Caretaker</a>
+                    <a href="#contact" class="hover:text-brandRed transition">Corporate Office</a>
+                </div>
 
-    <nav class="navbar">
+                <!-- Call & WA CTAs -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://wa.me/917898585434?text=Hello%20Pradumbh%20Kourav%20Ji,%20I%20need%20urgent%20assistance." target="_blank" class="pulse-wa bg-brandGreen hover:bg-emerald-700 text-white text-xs md:text-sm font-bold py-2.5 px-4 rounded-xl shadow transition flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp Lead</span>
+                    </a>
+                    <a href="tel:+917898585434" class="pulse-call bg-brandRed hover:bg-brandRedHover text-white text-xs md:text-sm font-black py-2.5 px-5 rounded-xl shadow-md flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>CALL 78985 85434</span>
+                    </a>
+                </div>
 
-        <div class="logo">
-            <img src="logo.png.png" alt="Pawanputra">
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center gap-2">
+                    <a href="https://wa.me/917898585434?text=Hello%20Pradumbh%20Kourav%20Ji,%20I%20need%20urgent%20assistance." target="_blank" class="bg-brandGreen text-white p-2.5 rounded-xl text-base font-bold">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="tel:+917898585434" class="bg-brandRed text-white p-2.5 rounded-xl text-base font-bold">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="p-2 text-slate-800 rounded-lg hover:bg-slate-100">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <a href="tel:7898585434" class="call-btn">
-            <i class="fa-solid fa-phone"></i>
-            CALL NOW
-        </a>
-
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-brandNavy text-white px-4 pt-3 pb-6 space-y-3">
+            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 border-b border-slate-800 font-medium">Our Services</a>
+            <a href="#city-areas" onclick="toggleMobileMenu()" class="block py-2 border-b border-slate-800 font-medium">Service Hubs (Indore, Bhopal, Jabalpur)</a>
+            <a href="#equipment" onclick="toggleMobileMenu()" class="block py-2 border-b border-slate-800 font-medium">Hospital Equipment Rent/Sale</a>
+            <a href="#healthcare" onclick="toggleMobileMenu()" class="block py-2 border-b border-slate-800 font-medium">Nursing Staff & Caretaker</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 border-b border-slate-800 font-medium">Contact & Office Address</a>
+            <div class="pt-3 flex flex-col gap-2">
+                <button onclick="openBookingModal(); toggleMobileMenu();" class="w-full bg-brandGreen text-white font-extrabold py-3 rounded-xl flex items-center justify-center gap-2 shadow">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Direct WhatsApp Booking
+                </button>
+            </div>
+        </div>
     </nav>
 
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-slate-950 via-brandNavy to-slate-900 text-white py-14 lg:py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#DC2626_1px,transparent_1px)] [background-size:20px_20px]"></div>
 
-    <!-- HERO -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-red-950/80 border border-brandRed/50 text-red-300 text-xs sm:text-sm font-extrabold px-3.5 py-1.5 rounded-full">
+                        <i class="fa-solid fa-shield-heart text-brandRed"></i>
+                        <span>INDORE • BHOPAL • JABALPUR EMERGENCY HELPLINE</span>
+                    </div>
 
-    <section class="hero" id="home">
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
+                        Complete <span class="text-brandRed">Ambulance</span> & Hospital Equipment <span class="text-brandTeal font-extrabold">Care</span> Services
+                    </h1>
 
-        <div class="hero-content">
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal">
+                        24/7 Critical Air & Ground Ambulance, Mortuary Freezer Rental, Shav Vahan, Home Caretaker/Nursing Staff, and Medical Equipment on Rent & Sale across Central MP.
+                    </p>
 
-            <span class="emergency-tag">
-                🚨 24×7 EMERGENCY SERVICE
-            </span>
+                    <!-- Quick City Badges -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-2">
+                        <span class="text-xs font-bold text-slate-400">Core Hubs:</span>
+                        <span class="bg-white/10 backdrop-blur border border-white/20 text-white text-xs font-bold px-3 py-1 rounded-lg">Indore (HQ)</span>
+                        <span class="bg-white/10 backdrop-blur border border-white/20 text-white text-xs font-bold px-3 py-1 rounded-lg">Bhopal</span>
+                        <span class="bg-white/10 backdrop-blur border border-white/20 text-white text-xs font-bold px-3 py-1 rounded-lg">Jabalpur</span>
+                    </div>
 
-            <h1>
-                Ambulance & Mortuary Freezer Services in Indore
-            </h1>
+                    <!-- Call & WhatsApp Lead CTAs -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/917898585434?text=Hello%20Pradumbh%20Kourav%20Ji,%20I%20need%20urgent%20Pawanputra%20Ambulance/Healthcare%20service." target="_blank" class="w-full sm:w-auto pulse-wa bg-brandGreen hover:bg-emerald-700 text-white font-black text-lg px-8 py-4 rounded-xl shadow-xl flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-3xl"></i>
+                            <span>WhatsApp Pradumbh Kourav</span>
+                        </a>
 
-            <p>
-                Fast, Reliable and Professional Emergency Services
-                Available 24 Hours a Day.
-            </p>
+                        <a href="tel:+917898585434" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-white font-bold text-base px-6 py-4 rounded-xl shadow-lg border border-slate-700 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone text-brandYellow"></i>
+                            <span>Call 78985 85434</span>
+                        </a>
+                    </div>
 
-            <div class="hero-buttons">
+                    <div class="pt-2 text-slate-400 text-xs flex items-center justify-center lg:justify-start gap-2">
+                        <i class="fa-solid fa-circle-check text-brandGreen"></i>
+                        <span>Contact Person: <strong>Pradumbh Kourav</strong> (Operational Manager)</span>
+                    </div>
+                </div>
 
-                <a href="tel:7898585434" class="primary-btn">
-                    <i class="fa-solid fa-phone"></i>
-                    Call Ambulance
-                </a>
+                <!-- Right Quick Dispatch Card with Direct WhatsApp Routing -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white text-slate-900 p-6 sm:p-8 rounded-3xl shadow-2xl border-4 border-brandGreen/30 relative">
+                        <div class="absolute -top-3.5 right-6 bg-brandGreen text-white text-xs font-black uppercase px-3 py-1 rounded-md tracking-wider shadow flex items-center gap-1">
+                            <i class="fa-brands fa-whatsapp"></i> Instant WA Routing
+                        </div>
 
-                <a href="#services" class="secondary-btn">
-                    Our Services
-                </a>
+                        <h3 class="text-xl font-black text-brandNavy mb-1 flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-brandGreen text-2xl"></i> Direct WhatsApp Booking
+                        </h3>
+                        <p class="text-xs text-slate-500 mb-4">Submitting will route detailed information directly to Pradumbh Kourav on WhatsApp.</p>
 
-            </div>
+                        <form id="heroQuickForm" onsubmit="handleHeroSubmit(event)" class="space-y-3">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Select Service City *</label>
+                                <select id="heroCity" required class="w-full px-3.5 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brandGreen focus:outline-none text-sm bg-slate-50 font-bold text-brandNavy">
+                                    <option value="Indore">Indore (Vijay Nagar HQ & City)</option>
+                                    <option value="Bhopal">Bhopal (Regional Hub)</option>
+                                    <option value="Jabalpur">Jabalpur (Regional Hub)</option>
+                                    <option value="Other MP Location">Other Outstation MP Region</option>
+                                </select>
+                            </div>
 
-        </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Required Service *</label>
+                                <select id="heroService" required class="w-full px-3.5 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brandGreen focus:outline-none text-sm bg-slate-50">
+                                    <option value="Air Ambulance Service">Air Ambulance Service</option>
+                                    <option value="Ventilator / ICU Ambulance">ICU / Ventilator Ambulance</option>
+                                    <option value="Basic Stretcher Ambulance">Basic Life Support Ambulance</option>
+                                    <option value="Mortuary Freezer Box on Rent">Mortuary Freezer Box on Rent</option>
+                                    <option value="Shav Vahan (Funeral Vehicle)">Shav Vahan (Dead Body Transport)</option>
+                                    <option value="Healthcare Caretaker / Nursing Staff">Healthcare Nursing / Caretaker Staff</option>
+                                    <option value="Hospital Equipment Rent & Sale">Hospital Equipment Rent / Purchase</option>
+                                </select>
+                            </div>
 
-    </section>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name *</label>
+                                <input type="text" id="heroName" required placeholder="Full Name" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brandGreen focus:outline-none text-sm">
+                            </div>
 
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Mobile Phone Number *</label>
+                                <input type="tel" id="heroPhone" required placeholder="10-digit Phone Number" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brandGreen focus:outline-none text-sm">
+                            </div>
 
-    <!-- SERVICES -->
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Patient Condition / Address / Notes</label>
+                                <textarea id="heroDetails" rows="2" placeholder="Mention pickup location, hospital, or specific needs..." class="w-full px-3.5 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brandGreen focus:outline-none text-sm"></textarea>
+                            </div>
 
-    <section class="services" id="services">
-
-        <div class="section-title">
-
-            <span>OUR SERVICES</span>
-
-            <h2>Professional Healthcare & Emergency Services</h2>
-
-            <p>
-                We provide reliable and fast services across Indore.
-            </p>
-
-        </div>
-
-
-        <div class="service-container">
-
-            <div class="service-card">
-                <div class="service-icon">🚑</div>
-                <h3>Ambulance Service</h3>
-                <p>24×7 ambulance services for emergency and patient transportation.</p>
-                <a href="ambulance-service.html">
-                                   View Ambulance Services →</a>
-
-            </div>
-
-
-            <div class="service-card">
-                <div class="service-icon">❄️</div>
-                <h3>Mortuary Freezer</h3>
-                <p>Dead Body Freezer Box and Mortuary Freezer services available 24×7.</p>
-                <a href="tel:7898585434">Call Now →</a>
-            </div>
-
-
-            <div class="service-card">
-                <div class="service-icon">🏥</div>
-                <h3>Home Healthcare</h3>
-                <p>Professional healthcare support and patient care services at home.</p>
-                <a href="tel:7898585434">Call Now →</a>
-            </div>
-
-
-            <div class="service-card">
-                <div class="service-icon">👩‍⚕️</div>
-                <h3>Nursing Staff</h3>
-                <p>Experienced nursing staff available for home healthcare support.</p>
-                <a href="tel:7898585434">Call Now →</a>
-            </div>
-
-
-            <div class="service-card">
-                <div class="service-icon">❤️</div>
-                <h3>Patient Caretaker</h3>
-                <p>Dedicated caretakers for elderly and patient care at home.</p>
-                <a href="tel:7898585434">Call Now →</a>
-            </div>
-
-
-            <div class="service-card emergency-card">
-                <div class="service-icon">🚨</div>
-                <h3>Emergency Support</h3>
-                <p>तत्काल सहायता के लिए हमें अभी कॉल करें।</p>
-                <a href="tel:7898585434">Emergency Call →</a>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section class="about" id="about">
-
-        <div class="about-content">
-
-            <div class="about-left">
-
-                <span>ABOUT PAWANPUTRA</span>
-
-                <h2>
-                    Your Trusted Emergency Service Partner in Indore
-                </h2>
-
-                <p>
-                    Pawanputra Ambulance & Mortuary Freezer Services provides
-                    reliable emergency transportation and healthcare support services.
-                </p>
-
-                <p>
-                    Our priority is fast response, professional service
-                    and complete support during emergencies.
-                </p>
-
-                <div class="features">
-                    <div>✅ 24×7 Service Available</div>
-                    <div>✅ Fast Response</div>
-                    <div>✅ Professional Team</div>
-                    <div>✅ Service Across Indore</div>
+                            <button type="submit" class="w-full bg-brandGreen hover:bg-emerald-700 text-white font-black py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-base">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                                <span>SEND VIA WHATSAPP NOW</span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
 
             </div>
+        </div>
+    </section>
 
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brandTeal font-extrabold uppercase text-xs tracking-widest bg-teal-100 px-3.5 py-1 rounded-full">Complete Healthcare Solutions</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-brandNavy mt-2">Our Key Services</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-2">Available 24 hours a day with fast WhatsApp lead dispatch for Indore, Bhopal, and Jabalpur.</p>
+            </div>
 
-            <div class="about-right">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <div class="emergency-box">
+                <!-- Service 1: Ambulance Services (All Types & Air) -->
+                <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition">
+                    <div>
+                        <div class="relative h-48 bg-slate-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1587745416684-47953f16f02f?auto=format&fit=crop&w=600&q=80" alt="Ambulance Service" class="w-full h-full object-cover opacity-90 hover:scale-105 transition duration-500">
+                            <span class="absolute top-3 right-3 bg-brandRed text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">24/7 Air & Road</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-extrabold text-brandNavy mb-2">Ambulance Services (All Types & Air)</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                Complete emergency patient transfer setup including Air Ambulance aircraft charters, ICU Ventilator vans, Basic Oxygen support, and intercity stretchers.
+                            </p>
+                            <ul class="text-xs space-y-2 text-slate-700 font-medium mb-4">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-plane text-brandBlue"></i> Air Ambulance (Nationwide Emergency)</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-heart-pulse text-brandRed"></i> ACLS Ventilator ICU Ambulances</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-truck-medical text-brandGreen"></i> Basic Life Support & Oxygen Support</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 space-y-2">
+                        <button onclick="quickBook('Air & Road Ambulance Services')" class="w-full bg-brandGreen hover:bg-emerald-700 text-white text-xs font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> <span>Book Ambulance via WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
 
-                    <i class="fa-solid fa-phone-volume"></i>
+                <!-- Service 2: Mortuary Freezer on Rent -->
+                <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition">
+                    <div>
+                        <div class="relative h-48 bg-slate-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80" alt="Mortuary Freezer Box" class="w-full h-full object-cover opacity-80 hover:scale-105 transition duration-500">
+                            <span class="absolute top-3 right-3 bg-brandBlue text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">Home Delivery</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-extrabold text-brandNavy mb-2">Mortuary Freezer Box on Rent</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                High-quality, temperature-controlled, sanitized mortuary freezer boxes delivered to your doorstep in Indore, Bhopal, and Jabalpur.
+                            </p>
+                            <ul class="text-xs space-y-2 text-slate-700 font-medium mb-4">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-snowflake text-blue-500"></i> Heavy Cooling (-5°C to -15°C)</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-eye text-blue-500"></i> Glass Top Viewing Window</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-truck-ramp-box text-blue-500"></i> Doorstep Installation & Setup</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 space-y-2">
+                        <button onclick="quickBook('Mortuary Freezer Box Rental')" class="w-full bg-brandGreen hover:bg-emerald-700 text-white text-xs font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> <span>Rent Freezer Box via WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
 
-                    <h3>Need Emergency Help?</h3>
+                <!-- Service 3: Shav Vahan (Dead Body Transport) -->
+                <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition">
+                    <div>
+                        <div class="relative h-48 bg-slate-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" alt="Shav Vahan" class="w-full h-full object-cover opacity-80 hover:scale-105 transition duration-500">
+                            <span class="absolute top-3 right-3 bg-slate-800 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow">Dignified Transport</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-extrabold text-brandNavy mb-2">Shav Vahan (Funeral Vehicle)</h3>
+                            <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                                Respectful dead body transportation for local funeral grounds, home transfers, and outstation long-distance journeys.
+                            </p>
+                            <ul class="text-xs space-y-2 text-slate-700 font-medium mb-4">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-ribbon text-purple-600"></i> Clean & Spaciously Designed Vans</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-users text-purple-600"></i> Seating for Family Members</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-route text-purple-600"></i> Intercity Outstation Travel Ready</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 space-y-2">
+                        <button onclick="quickBook('Shav Vahan Funeral Transport')" class="w-full bg-brandGreen hover:bg-emerald-700 text-white text-xs font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> <span>Book Shav Vahan via WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
 
-                    <p>Call us immediately</p>
+            </div>
+        </div>
+    </section>
 
-                    <a href="tel:7898585434">
-                        7898585434
+    <!-- Dedicated Healthcare & Equipment Section -->
+    <section id="healthcare" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Healthcare Staff Card -->
+                <div class="bg-gradient-to-br from-teal-50 to-emerald-50 border border-teal-200 p-8 rounded-3xl shadow-lg relative">
+                    <span class="bg-brandTeal text-white text-xs font-black uppercase px-3.5 py-1 rounded-full tracking-wider">Staffing Solutions</span>
+                    <h3 class="text-2xl font-black text-brandNavy mt-3 mb-2">Healthcare Services (Nursing & Caretaker)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        We provide verified, experienced home nurses and compassionate patient caretakers for post-surgery recovery, elderly care, and bedridden patient support.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4 text-xs font-semibold text-slate-800 mb-6">
+                        <div class="bg-white p-3.5 rounded-xl border border-teal-100 flex items-center gap-3">
+                            <i class="fa-solid fa-user-nurse text-2xl text-brandTeal"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Registered Nurses</h4>
+                                <p class="text-slate-500 text-[11px]">Injection, IV, Dressing & Medication</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-3.5 rounded-xl border border-teal-100 flex items-center gap-3">
+                            <i class="fa-solid fa-hands-holding-child text-2xl text-brandGreen"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900">24/7 Home Caretakers</h4>
+                                <p class="text-slate-500 text-[11px]">Daily hygiene & patient assistance</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="quickBook('Healthcare Nursing & Caretaker Staff')" class="w-full bg-brandGreen hover:bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Request Nursing / Caretaker via WhatsApp
+                    </button>
+                </div>
+
+                <!-- Hospital Equipment Rent & Sale -->
+                <div id="equipment" class="bg-gradient-to-br from-slate-900 via-brandNavy to-slate-900 text-white p-8 rounded-3xl shadow-xl relative border border-slate-800">
+                    <span class="bg-brandYellow text-slate-950 text-xs font-black uppercase px-3.5 py-1 rounded-full tracking-wider">Rent & Sale</span>
+                    <h3 class="text-2xl font-black mt-3 mb-2">Hospital Equipment Rental & Sale</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Setup your home ICU with commercial-grade certified medical devices. Instant delivery available across Indore, Bhopal, and Jabalpur.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-3 text-xs mb-6">
+                        <div class="bg-white/10 backdrop-blur p-3 rounded-xl flex items-center gap-2">
+                            <i class="fa-solid fa-bed-pulse text-brandYellow text-base"></i>
+                            <span>ICU & Semi-Fowler Beds</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur p-3 rounded-xl flex items-center gap-2">
+                            <i class="fa-solid fa-lungs text-blue-400 text-base"></i>
+                            <span>Oxygen Concentrators</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur p-3 rounded-xl flex items-center gap-2">
+                            <i class="fa-solid fa-heart-circle-check text-red-400 text-base"></i>
+                            <span>Patient Monitors (Multi-para)</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur p-3 rounded-xl flex items-center gap-2">
+                            <i class="fa-solid fa-wheelchair text-emerald-400 text-base"></i>
+                            <span>Wheelchairs & Suction</span>
+                        </div>
+                    </div>
+
+                    <button onclick="quickBook('Hospital Equipment Rental/Sale')" class="w-full bg-brandGreen hover:bg-emerald-700 text-white font-black py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Inquire Equipment via WhatsApp
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-City Tabs / Service Areas Section -->
+    <section id="city-areas" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-brandRed font-extrabold uppercase text-xs tracking-widest bg-red-100 px-3.5 py-1 rounded-full">Regional Coverage</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-brandNavy mt-2">Our Dedicated Service Areas</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-1">Select a city to view local station details, hospital networks, and dedicated WhatsApp contact points.</p>
+            </div>
+
+            <!-- City Tabs Header -->
+            <div class="flex justify-center gap-3 mb-8">
+                <button onclick="switchCityTab('indore')" id="tab-indore" class="city-tab active px-6 py-3 rounded-xl font-extrabold text-sm border-2 border-slate-300 transition flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot"></i> Indore (HQ)
+                </button>
+                <button onclick="switchCityTab('bhopal')" id="tab-bhopal" class="city-tab px-6 py-3 rounded-xl font-extrabold text-sm border-2 border-slate-300 text-slate-700 hover:bg-white transition flex items-center gap-2">
+                    <i class="fa-solid fa-building text-brandBlue"></i> Bhopal Hub
+                </button>
+                <button onclick="switchCityTab('jabalpur')" id="tab-jabalpur" class="city-tab px-6 py-3 rounded-xl font-extrabold text-sm border-2 border-slate-300 text-slate-700 hover:bg-white transition flex items-center gap-2">
+                    <i class="fa-solid fa-city text-brandGreen"></i> Jabalpur Hub
+                </button>
+            </div>
+
+            <!-- Tab Content Container -->
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-200 p-6 sm:p-10">
+                
+                <!-- INDORE CONTENT -->
+                <div id="city-indore" class="city-content">
+                    <div class="grid lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-7 space-y-4">
+                            <div class="inline-block bg-red-100 text-brandRed font-black text-xs px-3 py-1 rounded-md">Corporate Headquarters</div>
+                            <h3 class="text-2xl font-black text-brandNavy">Indore Ambulance & Healthcare Operations</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Stationed at <strong>Vijay Nagar (Near Sayaji Hotel)</strong>, our central control desk manages fleet response across Indore with emergency access to MY Hospital, Medanta, Bombay Hospital, and CHL.
+                            </p>
+                            
+                            <div class="grid sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-800 pt-2">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <i class="fa-solid fa-bolt text-brandRed mr-1.5"></i> 10-20 Min Local Response
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <i class="fa-solid fa-snowflake text-blue-500 mr-1.5"></i> Direct Home Freezer Delivery
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <i class="fa-solid fa-user-check text-brandGreen mr-1.5"></i> Local Caretakers Available
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <i class="fa-solid fa-plane text-purple-600 mr-1.5"></i> Devi Ahilya Airport Transfer
+                                </div>
+                            </div>
+
+                            <div class="pt-4 flex flex-wrap gap-3">
+                                <button onclick="quickBookCity('Indore')" class="bg-brandGreen hover:bg-emerald-700 text-white text-xs font-black px-6 py-3 rounded-xl shadow flex items-center gap-2">
+                                    <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Indore Dispatch
+                                </button>
+                                <a href="tel:+917898585434" class="bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold px-5 py-3 rounded-xl flex items-center gap-2">
+                                    <i class="fa-solid fa-phone"></i> Call Indore Unit
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5">
+                            <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Indore Service" class="w-full h-64 object-cover">
+                                <div class="bg-slate-900 text-white p-4 text-xs font-medium">
+                                    <i class="fa-solid fa-map-pin text-brandRed mr-1"></i> Vijay Nagar Near Sayaji Hotel, Indore - 452011
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BHOPAL CONTENT -->
+                <div id="city-bhopal" class="city-content hidden">
+                    <div class="grid lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-7 space-y-4">
+                            <div class="inline-block bg-blue-100 text-brandBlue font-black text-xs px-3 py-1 rounded-md">Regional Capital Hub</div>
+                            <h3 class="text-2xl font-black text-brandNavy">Bhopal Ambulance & Healthcare Operations</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Rapid ambulance deployment covering AIIMS Bhopal, MP Nagar, Kolar Road, and Hoshangabad Road corridors. Full availability of Mortuary Freezers and Home Care Staff.
+                            </p>
+                            
+                            <div class="grid sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-800 pt-2">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <i class="fa-solid fa-hospital text-brandBlue mr-1.5"></i> AIIMS & Bansal Hospital Route
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <i class="fa-solid fa-truck-fast text-brandRed mr-1.5"></i> Fast Intercity to Indore/Delhi
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <i class="fa-solid fa-suitcase-medical text-brandGreen mr-1.5"></i> ICU Equipment Rental
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <i class="fa-solid fa-user-nurse text-purple-600 mr-1.5"></i> Trained Bhopal Nursing Staff
+                                </div>
+                            </div>
+
+                            <div class="pt-4 flex flex-wrap gap-3">
+                                <button onclick="quickBookCity('Bhopal')" class="bg-brandGreen hover:bg-emerald-700 text-white text-xs font-black px-6 py-3 rounded-xl shadow flex items-center gap-2">
+                                    <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Bhopal Dispatch
+                                </button>
+                                <a href="tel:+917898585434" class="bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold px-5 py-3 rounded-xl flex items-center gap-2">
+                                    <i class="fa-solid fa-phone"></i> Call Bhopal Unit
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5">
+                            <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80" alt="Bhopal Service" class="w-full h-64 object-cover">
+                                <div class="bg-slate-900 text-white p-4 text-xs font-medium">
+                                    <i class="fa-solid fa-map-pin text-brandBlue mr-1"></i> MP Nagar & AIIMS Hospital Connectivity Zone, Bhopal
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JABALPUR CONTENT -->
+                <div id="city-jabalpur" class="city-content hidden">
+                    <div class="grid lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-7 space-y-4">
+                            <div class="inline-block bg-emerald-100 text-brandGreen font-black text-xs px-3 py-1 rounded-md">Mahakaushal Regional Hub</div>
+                            <h3 class="text-2xl font-black text-brandNavy">Jabalpur Ambulance & Healthcare Operations</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Serving Jabalpur Medical College, Wright Town, and Civil Lines area with 24/7 ground ambulances, outstation patient transfer, and home mortuary freezer units.
+                            </p>
+                            
+                            <div class="grid sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-800 pt-2">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <i class="fa-solid fa-heart-pulse text-brandRed mr-1.5"></i> Medical College Emergency Route
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <i class="fa-solid fa-van-shuttle text-brandGreen mr-1.5"></i> Outstation Transfer to Nagpur/Bhopal
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <i class="fa-solid fa-snowflake text-blue-500 mr-1.5"></i> Quick Freezer Delivery
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                                    <i class="fa-solid fa-bed text-purple-600 mr-1.5"></i> Home ICU Bed & Oxygen Rental
+                                </div>
+                            </div>
+
+                            <div class="pt-4 flex flex-wrap gap-3">
+                                <button onclick="quickBookCity('Jabalpur')" class="bg-brandGreen hover:bg-emerald-700 text-white text-xs font-black px-6 py-3 rounded-xl shadow flex items-center gap-2">
+                                    <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Jabalpur Dispatch
+                                </button>
+                                <a href="tel:+917898585434" class="bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold px-5 py-3 rounded-xl flex items-center gap-2">
+                                    <i class="fa-solid fa-phone"></i> Call Jabalpur Unit
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5">
+                            <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                                <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=600&q=80" alt="Jabalpur Service" class="w-full h-64 object-cover">
+                                <div class="bg-slate-900 text-white p-4 text-xs font-medium">
+                                    <i class="fa-solid fa-map-pin text-brandGreen mr-1"></i> Wright Town & Medical College Hub, Jabalpur
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Office & Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-10">
+                
+                <!-- Contact Card -->
+                <div class="lg:col-span-6 bg-slate-900 text-white p-8 rounded-3xl shadow-xl flex flex-col justify-between">
+                    <div>
+                        <span class="text-brandYellow font-extrabold text-xs uppercase tracking-widest bg-yellow-950 border border-brandYellow/30 px-3 py-1 rounded-full">Corporate Contact</span>
+                        <h3 class="text-3xl font-black mt-3 mb-2">Pawanputra Control Desk</h3>
+                        <p class="text-slate-300 text-sm mb-6">Reach out to operational manager Pradumbh Kourav directly on WhatsApp or phone for immediate emergency dispatch.</p>
+
+                        <div class="space-y-4 text-sm font-medium">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-brandRed flex items-center justify-center text-white shrink-0">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400">Contact Person</p>
+                                    <p class="font-bold text-white text-base">Pradumbh Kourav</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-brandGreen flex items-center justify-center text-white shrink-0 text-xl">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400">Direct 24/7 Phone / WhatsApp</p>
+                                    <a href="https://wa.me/917898585434?text=Hello%20Pradumbh%20Kourav%20Ji,%20I%20am%20contacting%20you%20from%20the%20website." target="_blank" class="font-black text-emerald-400 text-lg hover:underline">+91 78985 85434</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-brandBlue flex items-center justify-center text-white shrink-0">
+                                    <i class="fa-solid fa-building font-bold"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400">Corporate Office Address</p>
+                                    <p class="font-bold text-slate-200">Vijay Nagar, Near Sayaji Hotel, Indore - 452011 (M.P.)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 mt-6 border-t border-slate-800 flex gap-3">
+                        <a href="https://wa.me/917898585434?text=Hello%20Pradumbh%20Kourav%20Ji,%20I%20need%20urgent%20assistance." target="_blank" class="flex-1 bg-brandGreen hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm py-3.5 rounded-xl text-center shadow flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Direct WhatsApp
+                        </a>
+                        <a href="tel:+917898585434" class="flex-1 bg-brandRed hover:bg-brandRedHover text-white font-extrabold text-xs sm:text-sm py-3.5 rounded-xl text-center shadow flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Office Location Details -->
+                <div class="lg:col-span-6 bg-slate-50 border border-slate-200 p-8 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-xl font-black text-brandNavy mb-2">Vijay Nagar, Indore Head Office</h4>
+                        <p class="text-slate-600 text-sm mb-4">Our strategic location near Sayaji Hotel ensures immediate access to Major Arterial roads & AB Road Highway for fast outstation deployment.</p>
+
+                        <div class="bg-white p-4 rounded-2xl border border-slate-200 space-y-3 text-xs mb-6">
+                            <div class="flex justify-between items-center border-b border-slate-100 pb-2">
+                                <span class="text-slate-500">Service Reach:</span>
+                                <span class="font-bold text-slate-800">Indore, Bhopal, Jabalpur & Outstation</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-slate-100 pb-2">
+                                <span class="text-slate-500">Working Hours:</span>
+                                <span class="font-bold text-brandRed">24 Hours / 365 Days</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-500">Lead Response Speed:</span>
+                                <span class="font-bold text-brandGreen">Instant WhatsApp Dispatch</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-brandNavy text-white p-4 rounded-2xl text-center">
+                        <p class="text-xs text-slate-300">Need immediate air ambulance or home ICU installation?</p>
+                        <a href="https://wa.me/917898585434?text=Hello%20Pradumbh%20Kourav%20Ji,%20I%20need%20urgent%20Air%20Ambulance%20/%20ICU%20Setup." target="_blank" class="text-emerald-400 font-black text-sm hover:underline block mt-1">
+                            <i class="fa-brands fa-whatsapp"></i> Chat with Pradumbh Kourav directly: +91 78985 85434
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 text-xs border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                <div>
+                    <span class="text-white font-black text-base">PAWANPUTRA AMBULANCE & HEALTHCARE SERVICES</span>
+                    <p class="text-slate-500 mt-1">Corporate HQ: Vijay Nagar Near Sayaji Hotel, Indore - 452011 (M.P.)</p>
+                </div>
+                <div class="flex gap-4 items-center">
+                    <a href="https://wa.me/917898585434" target="_blank" class="text-emerald-400 font-bold hover:underline flex items-center gap-1">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp: 78985 85434
                     </a>
-
+                    <span>|</span>
+                    <span class="text-slate-300">Manager: Pradumbh Kourav</span>
                 </div>
-
             </div>
-
+            <div class="mt-8 pt-4 border-t border-slate-900 text-center text-slate-600">
+                © <span id="year"></span> Pawanputra Ambulance & Healthcare Services. Serving Indore, Bhopal & Jabalpur.
+            </div>
         </div>
-
-    </section>
-
-
-    <!-- WHY CHOOSE US -->
-
-    <section class="why-us">
-
-        <div class="section-title">
-
-            <span>WHY CHOOSE US</span>
-
-            <h2>
-                We Are Available When You Need Us
-            </h2>
-
-        </div>
-
-
-        <div class="why-container">
-
-            <div class="why-card">
-                <i class="fa-solid fa-clock"></i>
-                <h3>24×7 Available</h3>
-                <p>Emergency support anytime.</p>
-            </div>
-
-            <div class="why-card">
-                <i class="fa-solid fa-bolt"></i>
-                <h3>Quick Response</h3>
-                <p>Fast assistance when required.</p>
-            </div>
-
-            <div class="why-card">
-                <i class="fa-solid fa-user-doctor"></i>
-                <h3>Professional Service</h3>
-                <p>Experienced and supportive team.</p>
-            </div>
-
-            <div class="why-card">
-                <i class="fa-solid fa-location-dot"></i>
-                <h3>Indore Coverage</h3>
-                <p>Services available across Indore.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section class="contact" id="contact">
-
-        <h2>Need Immediate Assistance?</h2>
-
-        <p>
-            Call Pawanputra Ambulance & Mortuary Freezer Services Now.
-        </p>
-
-        <a href="tel:7898585434" class="contact-call">
-
-            <i class="fa-solid fa-phone"></i>
-
-            7898585434
-
-        </a>
-
-    </section>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <div class="footer-logo">
-            <img src="logo.png.png" alt="Pawanputra">
-        </div>
-
-        <p>
-            © 2026 Pawanputra Ambulance & Mortuary Freezer Services
-        </p>
-
-        <p>
-            📍 Indore, Madhya Pradesh
-        </p>
-
     </footer>
 
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white text-slate-900 rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl border border-slate-200">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl w-8 h-8 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
 
-    <!-- FLOATING CALL BUTTON -->
+            <h3 class="text-2xl font-black text-brandNavy mb-1 flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-brandGreen"></i> WhatsApp Service Lead
+            </h3>
+            <p class="text-xs text-slate-500 mb-5">Indore • Bhopal • Jabalpur Dispatch to Pradumbh Kourav (+91 78985 85434)</p>
 
-    <a href="tel:7898585434" class="floating-call">
-        <i class="fa-solid fa-phone"></i>
-    </a>
+            <form id="modalForm" onsubmit="handleModalSubmit(event)" class="space-y-3 shadow-none">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">City *</label>
+                    <select id="modalCity" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brandGreen focus:outline-none text-sm bg-slate-50 font-bold">
+                        <option value="Indore">Indore</option>
+                        <option value="Bhopal">Bhopal</option>
+                        <option value="Jabalpur">Jabalpur</option>
+                        <option value="Other MP Region">Other Outstation Region</option>
+                    </select>
+                </div>
 
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Service Required *</label>
+                    <select id="modalService" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brandGreen focus:outline-none text-sm bg-slate-50">
+                        <option value="Ambulance Services (All Types & Air)">Ambulance Services (All Types & Air)</option>
+                        <option value="Mortuary Freezer Box on Rent">Mortuary Freezer Box on Rent</option>
+                        <option value="Shav Vahan (Funeral Vehicle)">Shav Vahan (Funeral Van)</option>
+                        <option value="Healthcare Nursing & Caretaker Staff">Healthcare Nursing & Caretaker Staff</option>
+                        <option value="Hospital Equipment Rent & Sale">Hospital Equipment Rent & Sale</option>
+                    </select>
+                </div>
 
-    <!-- JAVASCRIPT -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Patient / Contact Name *</label>
+                    <input type="text" id="modalName" required placeholder="Full Name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brandGreen focus:outline-none text-sm">
+                </div>
 
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Mobile Number *</label>
+                    <input type="tel" id="modalPhone" required placeholder="10-digit Mobile Number" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brandGreen focus:outline-none text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Address / Specific Requirements</label>
+                    <textarea id="modalDetails" rows="2" placeholder="Address, Pickup point, patient condition..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brandGreen focus:outline-none text-sm"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-brandGreen hover:bg-emerald-700 text-white font-black py-3.5 rounded-xl shadow-lg transition text-base flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> OPEN WHATSAPP CHAT NOW
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
     <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-        console.log("Pawanputra Website Loaded Successfully! 🚑");
+        const mobileMenu = document.getElementById('mobileMenu');
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
 
-        const cards = document.querySelectorAll(".service-card");
-
-        cards.forEach((card) => {
-
-            card.addEventListener("mouseenter", () => {
-                card.style.cursor = "pointer";
+        // City Tab Switcher
+        function switchCityTab(cityKey) {
+            document.querySelectorAll('.city-tab').forEach(tab => {
+                tab.classList.remove('active');
+                tab.classList.add('text-slate-700');
+            });
+            document.querySelectorAll('.city-content').forEach(content => {
+                content.classList.add('hidden');
             });
 
-        });
+            document.getElementById(`tab-${cityKey}`).classList.add('active');
+            document.getElementById(`tab-${cityKey}`).classList.remove('text-slate-700');
+            document.getElementById(`city-${cityKey}`).classList.remove('hidden');
+        }
 
+        // Booking Modal Operations
+        function openBookingModal() {
+            document.getElementById('bookingModal').classList.remove('hidden');
+        }
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+        function quickBook(serviceName) {
+            document.getElementById('modalService').value = serviceName;
+            openBookingModal();
+        }
+        function quickBookCity(cityName) {
+            document.getElementById('modalCity').value = cityName;
+            openBookingModal();
+        }
+
+        // Helper to construct WhatsApp Link & Open
+        function sendWhatsAppLead(name, phone, city, service, details) {
+            const recipientNumber = "917898585434";
+            
+            let message = `🚨 *NEW EMERGENCY / SERVICE INQUIRY* 🚨\n\n`;
+            message += `👤 *Customer Name:* ${name}\n`;
+            message += `📞 *Phone Number:* ${phone}\n`;
+            message += `📍 *City / Hub:* ${city}\n`;
+            message += `🚑 *Service Required:* ${service}\n`;
+            if (details && details.trim() !== "") {
+                message += `📝 *Notes/Address:* ${details.trim()}\n`;
+            }
+            message += `\nHello Pradumbh Kourav Ji, please review this request and contact me urgently.`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const waUrl = `https://wa.me/${recipientNumber}?text=${encodedMessage}`;
+
+            window.open(waUrl, '_blank');
+        }
+
+        // Hero Form Submit -> WhatsApp
+        function handleHeroSubmit(event) {
+            event.preventDefault();
+            const city = document.getElementById('heroCity').value;
+            const service = document.getElementById('heroService').value;
+            const name = document.getElementById('heroName').value;
+            const phone = document.getElementById('heroPhone').value;
+            const details = document.getElementById('heroDetails').value;
+
+            sendWhatsAppLead(name, phone, city, service, details);
+        }
+
+        // Modal Form Submit -> WhatsApp
+        function handleModalSubmit(event) {
+            event.preventDefault();
+            const city = document.getElementById('modalCity').value;
+            const service = document.getElementById('modalService').value;
+            const name = document.getElementById('modalName').value;
+            const phone = document.getElementById('modalPhone').value;
+            const details = document.getElementById('modalDetails').value;
+
+            closeBookingModal();
+            sendWhatsAppLead(name, phone, city, service, details);
+        }
     </script>
-
 </body>
 </html>
